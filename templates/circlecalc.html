@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<h1>Circle Area Calculator</h1>
+    
+    <p>The formula used to calculate the <b>Area = π × radius<sup>2</sup></b></p>
+        
+    <p>The formula to calculate the <b>Perimeter = 2 π r</b>. Enter the radius to calculate the perimeter of your circle. </p>
+
+    <form method="post">
+        <input type="number" name="radius" placeholder="Enter the radius" step="0.01" required>
+
+        <br><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+   <br>
+
+    {% if area %}
+    <p><strong>Area of Circle:</strong> {{ area }} cm<sup>2</sup></p>
+    <p><strong>Perimeter of Circle:</strong> {{ perimeter }} cm</p>
+    {% endif %}
+
+{% endblock %}
